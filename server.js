@@ -2,7 +2,7 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const userRoutes = require("./routes/userApi");
-const itemRoutes = require("./routes/itemApi");
+// const itemRoutes = require("./routes/itemApi");
 const path = require("path");
 const PORT = process.env.PORT || 3001;
 const app = express();
@@ -18,7 +18,7 @@ if (process.env.NODE_ENV === "production") {
 
 // Add API Routes
 app.use("/api/user", userRoutes);
-app.use("/api/item", itemRoutes);
+// app.use("/api/item", itemRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs
